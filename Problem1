@@ -1,0 +1,52 @@
+//
+//  Problem 1.cpp
+//  Experiment 3
+//
+//  Created by Kyla Mae Salonga on 17/05/2019.
+//  Copyright © 2019 Kyla Mae Salonga. All rights reserved.
+//
+
+#include "Problem 1.hpp"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num[10];
+    int n, small = 0, smallNum, large, largeNum = 0;
+    double average, sum;
+    
+    cout << "Enter 10 integers: \n";
+    for (n = 0; n < 10; ++n)
+        num[n] = 0;
+    for (n = 0; n < 10; ++n)
+        cin >> num[n];
+    for (n = 0; n < 10; ++n)
+     
+    // smallest int
+    for (n = 0; n < 10; ++n)
+        if (num[small] > num[n])
+            small = n;
+        smallNum = num[small];
+    cout << "Smallest Number: " << smallNum << "\n";
+    
+    // largest int
+    large = 0;
+    for (n = 0; n < 10; ++n)
+    {
+        if (num[large] < num[n])
+            large = n;
+        largeNum = num[large];
+    }
+    cout << "Largest Number: " << largeNum << "\n";
+    
+    sum = 0;
+    for (n = 0; n < 10; ++n)
+        sum = sum + num[n];
+    cout << "Total Sum: " << sum << "\n";
+    
+    average = sum/10;
+    cout << "Average: " << average << "\n";
+    
+    return 0;
+}
